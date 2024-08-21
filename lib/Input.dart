@@ -24,6 +24,7 @@ class InputWidget extends StatelessWidget {
                 labelText: 'Nama'
                 ),
               ),
+
               SizedBox(height: 16),
           TextField (
             obscureText: false,
@@ -31,6 +32,16 @@ class InputWidget extends StatelessWidget {
               border:
                OutlineInputBorder(),
                 labelText: 'Umur'
+                ),
+              ),
+          
+              SizedBox(height: 16),
+          TextField (
+            obscureText: false,
+            decoration: InputDecoration (
+              border:
+               OutlineInputBorder(),
+                labelText: 'Kelas'
                 ),
               ),
           

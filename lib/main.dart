@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_1/DateTimer.dart';
 import 'package:widget_1/Input.dart';
 import 'package:widget_1/Scaffold_widget.dart';
 import 'package:widget_1/dialog.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: gambar(),
-      home: InputWidget(),
+      home: DatetimerWidget(),
 
   
 
