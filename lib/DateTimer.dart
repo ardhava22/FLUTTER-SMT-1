@@ -3,29 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:widget_1/main.dart';
 
-main() => runApp(MyApp());
 
-class DatetimerWidget extends StatelessWidget {
-  const DatetimerWidget ({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(title: 'Contoh Date Pickker',
-    home: MyHomePage(title: 'Contoh Date Picker'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+class DatetimerWidget extends StatefulWidget {
+  const DatetimerWidget({Key? key, required this.title}) : super(key: key);
 
   final String title;
 
   @override
-_MyHomePageState createState() => _MyHomePageState();
+_DatetimerWidgetState createState() => _DatetimerWidgetState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _DatetimerWidgetState extends State<DatetimerWidget> {
   // Variable/State Untuk Mengambil Tanggal
   DateTime selectedDate = DateTime.now();
 
@@ -46,11 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
+    return Center(
         child: Column(
           children: <Widget> [
           Text("${selectedDate.toLocal()}".split(' ')[0]),
@@ -64,7 +49,6 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-        ),
-      );
+        );
   }  
 }

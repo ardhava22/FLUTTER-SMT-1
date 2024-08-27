@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:widget_1/DateTimer.dart';
 import 'package:widget_1/Input.dart';
 import 'package:widget_1/Scaffold_widget.dart';
+import 'package:widget_1/Web.dart';
+import 'package:widget_1/WebBola.dart';
 import 'package:widget_1/dialog.dart';
 import 'package:widget_1/gambar.dart';
 import 'package:widget_1/image_widget.dart';
@@ -25,7 +27,8 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: gambar(),
-      home: DatetimerWidget(),
+      home: Webberita(),
+      // home: InputWidget(),
 
   
 

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:widget_1/DateTimer.dart';
+import 'package:widget_1/Input.dart';
 import 'package:widget_1/dialog.dart';
 
 class ScaffoldWidget extends StatelessWidget {
@@ -25,16 +27,21 @@ class ScaffoldWidget extends StatelessWidget {
       ),
       body: const Column(
         children: [
+          SizedBox(height: 25),
           Center(
-            child: Text("NGODINGG ASIKKKKK!?!?!?!?!?!?", 
+            child: Text("MASUKKAN IDENTITAS ANDA", 
              style: TextStyle(
-              fontSize: 20,
+              fontSize: 30,
               color: Colors.teal,
               fontWeight: FontWeight.bold,
               ),
              ),
             ),
+            SizedBox(height: 25),
+            InputWidget(),  
+            SizedBox(height: 25),
             DialogWidget(),
+            DatetimerWidget(title: "tanggal widget",),
         ],
       ),
         bottomNavigationBar: BottomNavigationBar(

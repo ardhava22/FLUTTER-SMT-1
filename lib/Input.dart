@@ -1,53 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:widget_1/dialog.dart';
 
-class InputWidget extends StatelessWidget {
+class InputWidget extends StatefulWidget {
   const InputWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: 
-      Scaffold(
-        appBar: 
-        AppBar(
-          title: Text ("Masukkan Identitas Anda")
-        ),
-        
-      body: const Column(
-        children: [
-          TextField(
-            obscureText: false,
-            decoration: InputDecoration (
-              border:
-               OutlineInputBorder(),
-                labelText: 'Nama'
-                ),
-              ),
+  State<InputWidget> createState() => _InputWidgetState();
+}
 
-              SizedBox(height: 16),
-          TextField (
-            obscureText: false,
-            decoration: InputDecoration (
-              border:
-               OutlineInputBorder(),
-                labelText: 'Umur'
+class _InputWidgetState extends State<InputWidget> {
+  TextEditingController nama = TextEditingController();
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      child: Column(
+          children: [
+            TextField(
+              controller: nama,
+              obscureText: false,
+              onChanged: (a) {
+                setState(() {});
+              },
+              decoration: InputDecoration (
+                border:
+                 OutlineInputBorder(),
+                  labelText: 'Nama'
+                  ),
                 ),
-              ),
-          
-              SizedBox(height: 16),
-          TextField (
-            obscureText: false,
-            decoration: InputDecoration (
-              border:
-               OutlineInputBorder(),
-                labelText: 'Kelas'
+                Text(nama.text), 
+      
+                SizedBox(height: 16),
+            TextField (
+              obscureText: false,
+              decoration: InputDecoration (
+                border:
+                 OutlineInputBorder(),
+                  labelText: 'Umur'
+                  ),
                 ),
-              ),
-          
-        ],
-      ), 
-        ),
+            
+                SizedBox(height: 16),
+            TextField (
+              obscureText: false,
+              decoration: InputDecoration (
+                border:
+                 OutlineInputBorder(),
+                  labelText: 'Kelas'
+                  ),
+                ),
+            
+          ],
+      ),
     );
   }
 }
