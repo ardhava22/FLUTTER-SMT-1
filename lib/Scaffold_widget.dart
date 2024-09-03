@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widget_1/DateTimer.dart';
 import 'package:widget_1/Input.dart';
 import 'package:widget_1/dialog.dart';
+import 'package:widget_1/row_colomn.dart';
 
 class ScaffoldWidget extends StatelessWidget {
   const ScaffoldWidget ({super.key});
@@ -25,25 +26,26 @@ class ScaffoldWidget extends StatelessWidget {
         backgroundColor: Colors.teal,
         foregroundColor: Colors.white,
       ),
-      body: const Column(
-        children: [
-          SizedBox(height: 25),
-          Center(
-            child: Text("MASUKKAN IDENTITAS ANDA", 
-             style: TextStyle(
-              fontSize: 30,
-              color: Colors.teal,
-              fontWeight: FontWeight.bold,
-              ),
-             ),
-            ),
-            SizedBox(height: 25),
-            InputWidget(),  
-            SizedBox(height: 25),
-            DialogWidget(),
-            DatetimerWidget(title: "tanggal widget",),
-        ],
-      ),
+      body: RowColumn(),
+      // const Column(
+      //   children: [
+      //     SizedBox(height: 25),
+      //     Center(
+      //       child: Text("MASUKKAN IDENTITAS ANDA", 
+      //        style: TextStyle(
+      //         fontSize: 30,
+      //         color: Colors.teal,
+      //         fontWeight: FontWeight.bold,
+      //         ),
+      //        ),
+      //       ),
+            // SizedBox(height: 25),
+            // InputWidget(),  
+            // SizedBox(height: 25),
+            // DialogWidget(),
+            // DatetimerWidget(title: "tanggal widget",),
+      //   ],
+      // ),
         bottomNavigationBar: BottomNavigationBar(
           selectedItemColor: Colors.teal,
           unselectedItemColor: Colors.grey,

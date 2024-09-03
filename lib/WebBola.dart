@@ -1,103 +1,113 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-void main() {
-  runApp(Webberita());
-}
+class Webbola extends StatelessWidget {
+  const Webbola({super.key});
 
-class Webberita extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MyApp',
-      theme: ThemeData(
-        primarySwatch: Colors.red,
-      ),
-      home: HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.tealAccent,
-        title: Text('Webberita'),
+        title: const Text('MyApp'),
+        backgroundColor: Colors.red,
       ),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Container(
-              padding: EdgeInsets.all(16),
-              alignment: Alignment.center,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                    Text('BERITA TERBARU'),
-                    Text('PERTANDINGAN HARI INI'),
-                ],
-              ),
+            // Header Row with "BERITA TERBARU" and "PERTANDINGAN HARI INI"
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'BERITA TERBARU',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Text(
+                    'PERTANDINGAN HARI INI',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ],
             ),
-        
-            Card(
-              margin: EdgeInsets.all(10.0),
+            const SizedBox(height: 4),
+            // Main News Container
+            Container(
+              color: Colors.purpleAccent,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Image.network(
-                    '../assets/bromoo.jpg',
-                    height: 200.0,
-                    width: 800.0,
+                  Image.asset(
+                    'assets/Mbappe.jpg',
+                    width: double.infinity,
+                    height: 230,
                     fit: BoxFit.cover,
                   ),
-                  Align(
-
-                    alignment: Alignment.center,
+                  const Padding(
+                    padding: EdgeInsets.all(10),
                     child: Text(
-                      'Costa Mendekat Ke Palmeiras',
-                      style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold,),
-                    ),
-                  ),
-                  Container(
-                    color: Colors.purple,
-                    padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                    child: Text('Transfer', style: TextStyle(color: Colors.white)),
-                  ),
-                ],  
-              ),
-            ),
-          
-            for (int i = 0; i < 2; i++) 
-              Card(
-                margin: EdgeInsets.symmetric(horizontal: 10.0, vertical: 5.0),
-                child: Row(
-                  children: [
-                    Image.network(
-                      '../assets/merbabu.jpg', 
-                      width: 100.0,
-                      height: 100.0,
-                      fit: BoxFit.cover,
-                    ),
-      
-                    SizedBox(width: 10.0),
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Pique Bilang Wasit Untungkan Madrid, Koeman Tepok Jidat',
-                            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
-                          ),
-                          
-                          
-                        ],
+                      'Mbappe berhasil memenangkan petandingan pertama di real madrid',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: Text(
+                      'Transfer',
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
+            ),
+            const SizedBox(height: 10),
+            // News List Section
+            Column(
+              children: [
+                ListTile(
+                  leading: Image.asset(
+                    'assets/bromoo.jpg',
+                    width: 100,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ),
+                  title: const Text(
+                    'Pique Bilang Wasit Untungkan Madrid, Koeman Tepok Jidat',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: const Text('Barcelona Feb 13, 2021'),
+                ),
+                const Divider(),
+                ListTile(
+                  leading: Image.asset(
+                    'assets/bromoo.jpg',
+                    width: 100,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ),
+                  title: const Text(
+                    'Pique Bilang Wasit Untungkan Madrid, Koeman Tepok Jidat',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  subtitle: const Text('Barcelona Feb 13, 2021'),
+                ),
+              ],
+            ),
           ],
         ),
       ),

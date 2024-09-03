@@ -7,6 +7,8 @@ import 'package:widget_1/WebBola.dart';
 import 'package:widget_1/dialog.dart';
 import 'package:widget_1/gambar.dart';
 import 'package:widget_1/image_widget.dart';
+import 'package:widget_1/row_colomn.dart';
+import 'package:widget_1/stack_position.dart';
 
 
 void main() {
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: gambar(),
-      home: Webberita(),
+      home: Webbola(),
       // home: InputWidget(),
 
   

@@ -9,8 +9,8 @@ class ImageNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      child: const [
       children: [
-      children: const [
         NewsItem(
           imageUrl: 'assets/images/diego-costa.jpg',
           title: 'Costa Mendekat Ke Palmeiras',
