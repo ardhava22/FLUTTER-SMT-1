@@ -8,7 +8,7 @@ class Webbola extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('MyApp'),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.tealAccent,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -40,7 +40,7 @@ class Webbola extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 4),
+            SizedBox(height: 4),
             // Main News Container
             Container(
               color: Colors.purpleAccent,
@@ -49,22 +49,22 @@ class Webbola extends StatelessWidget {
                 children: [
                   Image.asset(
                     'assets/Mbappe.jpg',
-                    width: double.infinity,
-                    height: 230,
                     fit: BoxFit.cover,
                   ),
-                  const Padding(
+                  Padding(
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      'Mbappe berhasil memenangkan petandingan pertama di real madrid',
+                      'Mbappe berhasil memenangkan petandingan pertama di real ',
                       style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                  const Padding(
+                  Container(
+                    alignment: Alignment.centerLeft,
                     padding: EdgeInsets.symmetric(horizontal: 10),
+                    color: Colors.blue,
                     child: Text(
                       'Transfer',
                       style: TextStyle(

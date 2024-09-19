@@ -4,9 +4,12 @@ import 'package:widget_1/Input.dart';
 import 'package:widget_1/Scaffold_widget.dart';
 import 'package:widget_1/Web.dart';
 import 'package:widget_1/WebBola.dart';
+import 'package:widget_1/awalan.dart';
 import 'package:widget_1/dialog.dart';
 import 'package:widget_1/gambar.dart';
-import 'package:widget_1/image_widget.dart';
+import 'package:widget_1/hitsking.dart';
+import 'package:widget_1/LoginPageHK.dart';
+import 'package:widget_1/loginhk.dart';
 import 'package:widget_1/row_colomn.dart';
 import 'package:widget_1/stack_position.dart';
 
@@ -29,7 +32,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: gambar(),
-      home: Webbola(),
+      home: LoginHK(),
       // home: InputWidget(),
 
   
